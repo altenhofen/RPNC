@@ -33,4 +33,10 @@ class RPNCTest {
         val expected = 39.25
         assertEquals(expected, rpnc.apply("7.5 2.5 + 7.85 * 2 /"))
     }
+
+    @Test
+    fun testErrors() {
+        val expected = 39.25
+        assertEquals(expected, rpnc.apply("7.5 2.5 hey + 7.85 * 2 / its wrong"))
+    }
 }
